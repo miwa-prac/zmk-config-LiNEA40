@@ -148,7 +148,7 @@
 &kp LEFT_WIN  &kp LANGUAGE_1  &mt LEFT_SHIFT LANGUAGE_2  &trans  &lt 2 SPACE  &mt LEFT_SHIFT TAB    &mt LEFT_CONTROL ENTER  &lt 3 SPACE         &mt RIGHT_SHIFT MINUS  &kp UNDER  &mt LEFT_ALT COMMA
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+            sensor-bindings = <&re_kp LC(MINUS) LC(EQUAL)>;
         };
 
         FUNCTION {
@@ -179,7 +179,7 @@
 &kp LS(DELETE)  &trans                 &trans                &trans                    &trans  &trans    &trans  &trans                                  &trans          &trans               &kp LS(LG(T))
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_OUT C_AC_ZOOM_IN>;
+            sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         MOUSE {
