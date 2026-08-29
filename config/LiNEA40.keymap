@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,
+            //スクロール方向を逆転,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -89,6 +89,11 @@
         at_sign {
             bindings = <&kp AT_SIGN>;
             key-positions = <25 26>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <9 8>;
         };
     };
 
@@ -131,13 +136,13 @@
 
         default_layer_win {
             bindings = <
-&kp Q         &kp W           &kp E                      &kp R   &kp T                                               &kp Y        &kp U  &kp I                  &kp O      &kp P
-&kp A         &kp S           &kp D                      &kp F   &kp G                                               &kp H        &kp J  &kp K                  &lt 5 L    &kp COMMA
-&kp Z         &kp X           &kp C                      &kp V   &kp B                                               &kp N        &kp M  &mkp MB1               &mkp MB2   &mkp MB3
-&kp LEFT_WIN  &kp LANGUAGE_1  &mt LEFT_SHIFT LANGUAGE_2  &trans  &kp BACKSPACE  &lt 2 TAB    &mt LEFT_CONTROL ENTER  &lt 3 SPACE         &mt RIGHT_SHIFT MINUS  &kp UNDER  &mt LEFT_ALT ESCAPE
+&kp Q         &kp W           &kp E                      &kp R   &kp T                                                      &kp Y        &kp U  &kp I                  &kp O      &kp P
+&kp A         &kp S           &kp D                      &kp F   &kp G                                                      &kp H        &kp J  &kp K                  &lt 5 L    &kp BACKSPACE
+&kp Z         &kp X           &kp C                      &kp V   &kp B                                                      &kp N        &kp M  &mkp MB1               &mkp MB2   &mkp MB3
+&kp LEFT_WIN  &kp LANGUAGE_1  &mt LEFT_SHIFT LANGUAGE_2  &trans  &lt 2 SPACE  &mt LEFT_SHIFT TAB    &mt LEFT_CONTROL ENTER  &lt 3 SPACE         &mt RIGHT_SHIFT MINUS  &kp UNDER  &mt LEFT_ALT COMMA
             >;
 
-            sensor-bindings = <&inc_dec_kp A B>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
         };
 
         FUNCTION {
@@ -151,10 +156,10 @@
 
         NUM {
             bindings = <
-&kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                    &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR        &kp BACKSLASH
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                    &kp PERCENT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN     &kp GREATER_THAN
-&trans        &kp MINUS     &kp KP_PLUS   &kp ASTERISK  &kp SLASH                       &kp QUESTION   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans                               &kp COLON              &kp SEMICOLON     &kp PIPE
+&trans           &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                    &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR        &kp BACKSLASH
+&kp DOT          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                     &kp PERCENT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN     &kp GREATER_THAN
+&kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL                    &kp QUESTION   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&kp KP_MULTIPLY  &kp SLASH     &trans        &trans        &trans     &trans    &trans  &trans                               &kp COLON              &kp SEMICOLON     &kp PIPE
             >;
         };
 
@@ -166,7 +171,7 @@
 &kp LS(DELETE)  &trans                 &trans                &trans                    &trans  &trans    &trans  &trans                                  &trans          &trans               &kp LS(LG(T))
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_OUT LG(C_AC_ZOOM_IN)>;
         };
 
         MOUSE {
